@@ -13,6 +13,16 @@ html {
   font-weight: $main-weight;
   color: #000;
 }
+body {
+  background-color: #fefefe;
+}
+h1,
+h2 {
+  font-size: rem($title-size);
+}
+h3 {
+  font-size: rem(24px);
+}
 
 // ~~~~~~~~~~~~~~~~~~~ Import other components ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @import "../components/header/header";

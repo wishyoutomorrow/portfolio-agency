@@ -1,0 +1,50 @@
+.nav {
+  font-size: 1rem;
+  padding: em(40px, $root-font-size) 0;
+  // .nav__wrapper
+  &__wrapper {
+    justify-content: space-between;
+  }
+  // .nav__logo
+  &__logo {
+    img {
+      display: block;
+    }
+  }
+  // .nav__list
+  &__list {
+  }
+}
+.nav-list {
+  font-size: 1rem;
+  gap: em(10px, $root-font-size) vw(60px);
+  // .nav-list__item
+  &__item {
+  }
+  // .nav-list__link
+  &__link {
+    font-size: em(16px, $root-font-size);
+    line-height: em(19px, 16px);
+    letter-spacing: 0.01em;
+    color: $black;
+    display: block;
+    height: 100%;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: $blue;
+      width: 0%;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.2s ease;
+      border-radius: 3px;
+    }
+    &:hover::after {
+      width: 70%;
+    }
+  }
+}
