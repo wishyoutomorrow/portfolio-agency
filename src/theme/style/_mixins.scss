@@ -1,0 +1,53 @@
+//* Adaptive
+@mixin adaptive($size, $min-size: 0, $condition: "max") {
+  @if ($condition == "max") and ($min-size == 0) {
+    @if ($size == "sm") {
+      @media (max-width: $sm) {
+        @content;
+      }
+    } @else if ($size == "md") {
+      @media (max-width: $md) {
+        @content;
+      }
+    } @else if ($size == "lg") {
+      @media (max-width: $lg) {
+        @content;
+      }
+    } @else if ($size == "xlg") {
+      @media (max-width: $xlg) {
+        @content;
+      }
+    } @else {
+      @media (max-width: $size) {
+        @content;
+      }
+    }
+  } @else if ($min-size != 0) and ($size == 0) {
+    @media (min-width: $min-size) {
+      @content;
+    }
+  }
+  @if ($min-size != 0) {
+    @if ($size == "sm") {
+      @media (max-width: $sm) and (min-width: $min-size) {
+        @content;
+      }
+    } @else if ($size == "md") {
+      @media (max-width: $md) and (min-width: $min-size) {
+        @content;
+      }
+    } @else if ($size == "lg") {
+      @media (max-width: $lg) and (min-width: $min-size) {
+        @content;
+      }
+    } @else if ($size == "xlg") {
+      @media (max-width: $xlg) and (min-width: $min-size) {
+        @content;
+      }
+    } @else {
+      @media (max-width: $size) and (min-width: $min-size) {
+        @content;
+      }
+    }
+  }
+}

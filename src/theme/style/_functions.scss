@@ -1,0 +1,23 @@
+@import "variables";
+
+//~ Transform px to - rem, em
+@function rem($px, $rem: $root-font-size) {
+  $result: calc($px / $rem) * 1rem;
+  @return $result;
+}
+@function em($px, $em: $root-font-size) {
+  $result: calc($px / $em) * 1em;
+  @return $result;
+}
+
+//~ Calculating total size with padding
+@function width($totalWidth: 100%, $padding: 15px) {
+  $result: calc($totalWidth + ($padding * 2));
+  @return $result;
+}
+
+//~ Transform px to vw
+@function vw($px-vw, $min-value: 0px, $width: $base-vw) {
+  $result: calc(($px-vw * 100vw) / $width);
+  @return $result;
+}

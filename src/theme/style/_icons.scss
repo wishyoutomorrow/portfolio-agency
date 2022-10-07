@@ -1,0 +1,50 @@
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "../fonts/" !default;
+
+$icon-box: "\e900";
+$icon-chart: "\e901";
+$icon-code: "\e902";
+$icon-wallet: "\e903";
+
+@font-face {
+  font-family: "#{$icomoon-font-family}";
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff") format("woff"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  font-family: "#{$icomoon-font-family}" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-box {
+  &:before {
+    content: $icon-box;
+  }
+}
+.icon-chart {
+  &:before {
+    content: $icon-chart;
+  }
+}
+.icon-code {
+  &:before {
+    content: $icon-code;
+  }
+}
+.icon-wallet {
+  &:before {
+    content: $icon-wallet;
+  }
+}

@@ -1,0 +1,27 @@
+//^ =============================== Size key ===============================
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xlg: 1200px;
+
+$base-vw: 1366px;
+$min-vw: 360px;
+
+//^ =============================== container ===============================
+$container-width: vw(1200px);
+$safe-padding: vw(5px);
+
+//^ =============================== font ===============================
+$font-size: 16px;
+$root-font-size: 10px;
+$title-size: 40px;
+$text-size: 15px;
+$main-font: "Averta", "sans-serif";
+$main-weight: 400;
+
+//^ =============================== colors ===============================
+
+$gray: #757575;
+$black: #000;
+$blue: #2639ed;
+$white: #f1f1f1;

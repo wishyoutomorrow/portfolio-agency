@@ -1,0 +1,9 @@
+.container {
+  width: width($container-width, $safe-padding);
+  margin: 0 auto;
+  padding: 0 $safe-padding;
+}
+
+.wrapper {
+  display: flex;
+}
